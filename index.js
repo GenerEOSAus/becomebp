@@ -116,9 +116,12 @@ async function run() {
   }
 
   let bps = await getBps();
-  let we_are_bp = bps.rows.find(b => b.owner === bp.name) !== undefined;
+  let bp_row = bps.rows.find(b => b.owner === bp.name);
 
-  if(!we_are_bp) {
+  let we_are_bp = bp_row !== undefined;
+  let we_are_active = bp_row !== undefined && bp_row.is_active != 0;
+
+  if(!we_are_bp || !we_are_active) {
     try {
       await regProducer(bp.name,bp.key,bp.url,bp.country);
       console.log('We are BP now');

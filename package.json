@@ -1,0 +1,23 @@
+{
+  "name": "becomebp",
+  "version": "1.0.0",
+  "description": "Become a block producer the moment TX enabled",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genereos/becomebp.git"
+  },
+  "author": "Nathan Rempel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genereos/becomebp/issues"
+  },
+  "homepage": "https://github.com/genereos/becomebp#readme",
+  "dependencies": {
+    "async": "^2.6.1",
+    "eosjs": "^14.1.0"
+  }
+}
